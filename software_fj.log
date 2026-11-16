@@ -1,0 +1,51 @@
+2026-11-15 13:41:49,336 | INFO     | ===== Inicio de la simulación Software FJ =====
+2026-11-15 13:41:49,336 | INFO     | Inicio operación 1: Registro de cliente válido
+2026-11-15 13:41:49,337 | INFO     | Operación 1 exitosa
+2026-11-15 13:41:49,337 | INFO     | Fin operación 1
+2026-11-15 13:41:49,337 | INFO     | Inicio operación 2: Cliente con correo inválido
+2026-11-15 13:41:49,338 | ERROR    | Operación 2 falló: [FJ-201] No fue posible registrar al cliente | causa: [FJ-101] Correo inválido: 'luis#correo'
+2026-11-15 13:41:49,338 | INFO     | Fin operación 2
+2026-11-15 13:41:49,338 | INFO     | Inicio operación 3: Cliente sin teléfono (parámetro faltante)
+2026-11-15 13:41:49,338 | ERROR    | Operación 3 falló: [FJ-201] No fue posible registrar al cliente | causa: [FJ-102] El teléfono es obligatorio
+2026-11-15 13:41:49,338 | INFO     | Fin operación 3
+2026-11-15 13:41:49,338 | INFO     | Inicio operación 4: Segundo cliente válido
+2026-11-15 13:41:49,338 | INFO     | Operación 4 exitosa
+2026-11-15 13:41:49,338 | INFO     | Fin operación 4
+2026-11-15 13:41:49,338 | INFO     | Inicio operación 5: Creación de sala válida
+2026-11-15 13:41:49,339 | INFO     | Operación 5 exitosa
+2026-11-15 13:41:49,339 | INFO     | Fin operación 5
+2026-11-15 13:41:49,339 | INFO     | Inicio operación 6: Equipo con tarifa inválida
+2026-11-15 13:41:49,339 | ERROR    | Operación 6 falló: [FJ-301] Tarifa inválida: 'gratis' | causa: could not convert string to float: 'gratis'
+2026-11-15 13:41:49,339 | INFO     | Fin operación 6
+2026-11-15 13:41:49,339 | INFO     | Inicio operación 7: Creación de equipo válido
+2026-11-15 13:41:49,339 | INFO     | Operación 7 exitosa
+2026-11-15 13:41:49,339 | INFO     | Fin operación 7
+2026-11-15 13:41:49,339 | INFO     | Inicio operación 8: Creación de asesoría válida
+2026-11-15 13:41:49,340 | INFO     | Operación 8 exitosa
+2026-11-15 13:41:49,340 | INFO     | Fin operación 8
+2026-11-15 13:41:49,340 | INFO     | Inicio operación 9: Reserva exitosa y procesada
+2026-11-15 13:41:49,340 | INFO     | Reserva #9 confirmada
+2026-11-15 13:41:49,340 | INFO     | Reserva #9 procesada. Costo total: $196,350.00
+2026-11-15 13:41:49,340 | DEBUG    | Fin del intento de procesamiento de la reserva #9
+2026-11-15 13:41:49,340 | INFO     | Operación 9 exitosa
+2026-11-15 13:41:49,340 | INFO     | Fin operación 9
+2026-11-15 13:41:49,340 | INFO     | Inicio operación 10: Reserva con duración inválida (20 h en sala)
+2026-11-15 13:41:49,340 | ERROR    | Operación 10 falló: [FJ-401] Duración inválida para la reserva | causa: [FJ-301] Una sala se reserva entre 1 y 12 horas
+2026-11-15 13:41:49,340 | INFO     | Fin operación 10
+2026-11-15 13:41:49,340 | INFO     | Inicio operación 11: Reserva de servicio no disponible
+2026-11-15 13:41:49,341 | ERROR    | Operación 11 falló: [FJ-302] El servicio 'Portátil Pro' no está disponible
+2026-11-15 13:41:49,341 | INFO     | Fin operación 11
+2026-11-15 13:41:49,341 | INFO     | Inicio operación 12: Confirmar una reserva ya cancelada
+2026-11-15 13:41:49,341 | INFO     | Reserva #12 cancelada
+2026-11-15 13:41:49,341 | ERROR    | Operación 12 falló: [FJ-402] No se puede confirmar una reserva CANCELADA
+2026-11-15 13:41:49,341 | INFO     | Fin operación 12
+2026-11-15 13:41:49,341 | INFO     | Inicio operación 13: Cálculo de costos sobrecargado
+2026-11-15 13:41:49,341 | INFO     | Operación 13 exitosa
+2026-11-15 13:41:49,341 | INFO     | Fin operación 13
+2026-11-15 13:41:49,341 | INFO     | Inicio operación 14: Cálculo con descuento inconsistente (150 %)
+2026-11-15 13:41:49,342 | ERROR    | Operación 14 falló: [FJ-501] Descuento fuera de rango [0,1): 1.5
+2026-11-15 13:41:49,342 | INFO     | Fin operación 14
+2026-11-15 13:41:49,342 | INFO     | Inicio operación 15: Error inesperado (cliente inexistente)
+2026-11-15 13:41:49,342 | CRITICAL | Operación 15 error inesperado: IndexError: list index out of range
+2026-11-15 13:41:49,342 | INFO     | Fin operación 15
+2026-11-15 13:41:49,342 | INFO     | ===== Fin de la simulación: el sistema siguió activo =====
