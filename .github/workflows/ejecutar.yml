@@ -1,0 +1,33 @@
+name: Ejecutar Software FJ
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ejecutar la simulacion
+        working-directory: src
+        run: python main.py
+
+      - name: Mostrar el log de eventos y errores
+        if: always()
+        run: cat logs/software_fj.log
+
+      - name: Guardar el log como evidencia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: software-fj-log
+          path: logs/software_fj.log
